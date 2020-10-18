@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Virtualization</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">IT601 Team Project 3</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href=".">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Docker, Linux, and Containerization
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="virtualization.html">Virtualization</a>
+                    <a class="dropdown-item" href="container.html"> Containerization</a>
+                    <a class="dropdown-item" href="virtvscont.html">Virtualization VS Containerization</a>
+                    <a class="dropdown-item" href="tutorial_webserver.html">How to Set Up a Web Server With Docker</a>
+                    <a class="dropdown-item" href="linuxcmds.html">Basic Linux Commands</a>
+                    <a class="dropdown-item" href="dockerpycharm.html">How to Connect Docker With Pycharm</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h2> Virtualization!</h2>
+
+ <img src="images/pexels-pixabay-257881.jpg" class="img-thumbnail" alt="Computer!" height="400" width="400">
+<br>
+<p></p>
+
+<p>We've come a long way from giant servers and computers that filled rooms and even warehouses. Proving Moore's Law, as more and more transistors were able to be put on a chip, the computers grew more and more powerful. Due to the popularity of the x86 architecture, majority of servers used processors based on this architecture as their central processing units (CPUs). From file servers to database, web, mail and all other servers, as the Internet grew this explosive growth in servers presented challenges. From the physical footprint required for these servers, to the need for acquiring new hardware, to being utilized for only a fraction of their capacity, Virtualization rose as an solution.</p>
+
+<p></p><br>
+<p>Virtualization relies on software to simulate hardware functionality. From servers to disk to ports, virtualizing allows IT organizations to run more than one virtual system, regardless of the OS or applications, on one physical server. This allows for greater efficiencies and greater economies of scale. Where one would have had to, for example, deploy 4 servers (web, mail, file, domain controller,  to establish an Internet presence for a small company, we can now do it with one physical server hosting all of them that are allocated resources per their use and function.</p>
+
+<p></p><br>
+
+<p>While Virtualization has brought a revolution, there are still several issues that persist with their use. Each virtual machine is still a full-fledged computer that must be managed as a standalone computer with regular OS and security patches. In a swimlane based application development architecture, the code must move from dev to testing to production to essentially a different computer each time, each one with it's own idiosyncrasies based on when and how it was last updated.</p>
+<p></p>
+<p>Containers attempt to solve these concerns. Containers are typically small units consisting an application and all it's dependencies. They typically do not contain the host OS or any of it's components, such as device drivers, display drivers and such. They contain everything that is needed to run the code and achieve the intended functionality. The containers are deployed on top of engines which provide the interface to the host OS and provide the application in the container all the services it needs.</p>
+<p></p>
+<p>If the container engine is universal, meaning it can run on multiple OSs, the container itself will be able to take advantage of that and be available across different hosts.</p>
+<p></p>
+<p>A big advantage of Containers is it isolates the software from it's environments, and ensures it works uniformly across the environment. In the swimlane example discussed earlier, the same container would flow along different environments, installed "on" the container engine. This ensures the code functions the same on each instance.</p>
+<p>Following is a depiction of how containers are implemented with Docker.</p>
+<img src="images/container-what-is-container.png" class="image-fluid" alt="Containers">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</div></body>
+</html>
