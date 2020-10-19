@@ -57,15 +57,23 @@
 
 <p></p><br>
 
-<p>While Virtualization has brought a revolution, there are still several issues that persist with their use. Each virtual machine is still a full-fledged computer that must be managed as a standalone computer with regular OS and security patches. In a swimlane based application development architecture, the code must move from dev to testing to production to essentially a different computer each time, each one with it's own idiosyncrasies based on when and how it was last updated.</p>
-<p></p>
-<p>Containers attempt to solve these concerns. Containers are typically small units consisting an application and all it's dependencies. They typically do not contain the host OS or any of it's components, such as device drivers, display drivers and such. They contain everything that is needed to run the code and achieve the intended functionality. The containers are deployed on top of engines which provide the interface to the host OS and provide the application in the container all the services it needs.</p>
-<p></p>
-<p>If the container engine is universal, meaning it can run on multiple OSs, the container itself will be able to take advantage of that and be available across different hosts.</p>
-<p></p>
-<p>A big advantage of Containers is it isolates the software from it's environments, and ensures it works uniformly across the environment. In the swimlane example discussed earlier, the same container would flow along different environments, installed "on" the container engine. This ensures the code functions the same on each instance.</p>
-<p>Following is a depiction of how containers are implemented with Docker.</p>
-<img src="images/container-what-is-container.png" class="image-fluid" alt="Containers">
+<p>So, how does virtualization work? A component most often called a Virtual Machine (VM) is a software container with the operating system and application bundled. Each virtual machine is a self contained, completely independent component installed on top of a <a href="https://www.vmware.com/topics/glossary/content/hypervisor">hypervisor</a> which manages it and decouples it from the hardware host and is responsible for dynamically allocating resources as needed to each VM it manages.</p>
+
+<p></p><br>
+
+<p>Some key properties of a VM are:</p>
+
+ <ul class="list-group list-group-flush">
+  <li class="list-group-item">Allows running multiple VMs, each with potentially different OS, on one hardware host.</li>
+  <li class="list-group-item">Allocate physical resources between VMs</li>
+  <li class="list-group-item">Provide fault tolerance and isolation.</li>
+  <li class="list-group-item">Eacy backup and recovery.</li>
+  <li class="list-group-item">Allow migration to better/different physical host easily as needed.</li>
+</ul>
+
+<p></p><br>
+<img src="images/virtualization.png" class="image-fluid" alt="Virtualization!">
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
